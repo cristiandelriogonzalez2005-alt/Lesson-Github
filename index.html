@@ -3,20 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Mejorada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+      color: #222;
+    }
+    header {
+      background: #4a69bd;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #1e3799;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #38ada9;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #079992;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #4a69bd;
+      color: white;
+      margin-top: 3rem;
+    }
+    .tarjeta {
+      background: #f1f2f6;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Hola, mundo</h1>
-  <p>Este es un ejemplo muy básico de una página HTML.</p>
+<header>
+  <h1>¡Bienvenido a mi página mejorada!</h1>
+  <p>Ejemplo extendido con estilos, interacción y contenido más completo.</p>
+</header>
 
-  <h2>Lista de cosas</h2>
+<nav>
+  <a href="#intro">Inicio</a>
+  <a href="#lista">Lista</a>
+  <a href="#galeria">Galería</a>
+  <a href="#extras">Extras</a>
+</nav>
+
+<section id="intro">
+  <h2>Introducción</h2>
+  <p>
+    Este es un ejemplo de página HTML ampliamente mejorado. Incluye estilos,
+    interactividad, navegación, tarjetas, animaciones simples y más.
+  </p>
+  <button onclick="alert('¡Hola desde la página mejorada!')">Salúdame</button>
+</section>
+
+<section id="lista">
+  <h2>Lista de cosas mejorada</h2>
   <ul>
     <li>Subir el proyecto a GitHub</li>
-    <!-- Qué es gitignore -->
-    <li>Enfrentarse a conflictos</li>
+    <li>Aprender qué es un archivo <code>.gitignore</code></li>
+    <li>Resolver conflictos de merge como un profesional</li>
+    <li>Crear ramas y fusionarlas</li>
+    <li>Documentar tu proyecto con README</li>
   </ul>
 
-  <button onclick="alert('¡Hola!')">Púlsame</button>
+  <div class="tarjeta">
+    <h3>Tip rápido sobre Git</h3>
+    <p>Usa <code>git status</code> siempre para saber qué está pasando en tu repo.</p>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galería</h2>
+  <p>Una pequeña colección visual:</p>
+  <div class="galeria">
+    <img src="https://picsum.photos/300/200?random=1" alt="Imagen random 1">
+    <img src="https://picsum.photos/300/200?random=2" alt="Imagen random 2">
+    <img src="https://picsum.photos/300/200?random=3" alt="Imagen random 3">
+    <img src="https://picsum.photos/300/200?random=4" alt="Imagen random 4">
+  </div>
+</section>
+
+<section id="extras">
+  <h2>Extras</h2>
+  <p>Un pequeño script que cambia el fondo al azar:</p>
+  <button onclick="cambiarFondo()">Cambiar fondo</button>
+
+  <script>
+    function cambiarFondo() {
+      const colores = ["#f6e58d", "#ffbe76", "#ff7979", "#badc58", "#dff9fb"];    
+      document.body.style.background = colores[Math.floor(Math.random() * colores.length)];
+    }
+  </script>
+</section>
+
+<footer>
+  <p>Hecho con ❤️ usando HTML, CSS y JavaScript</p>
+</footer>
 
 </body>
 </html>
