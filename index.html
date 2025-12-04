@@ -141,5 +141,29 @@
   <p>Hecho con ❤️ usando HTML, CSS y JavaScript</p>
 </footer>
 
+<section id="interactivos">
+  <h2>Recuadros Interactivos</h2>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+    <div class="tarjeta" style="flex: 1; min-width: 250px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="alert('¡Has pulsado la tarjeta 1!')">
+      <h3>Tarjeta Interactiva 1</h3>
+      <p>Pasa el ratón por encima o haz clic para ver la interacción.</p>
+    </div>
+
+    <div class="tarjeta" style="flex: 1; min-width: 250px; cursor: pointer; transition: transform 0.3s; background:#dcdde1;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="alert('¡Has pulsado la tarjeta 2!')">
+      <h3>Tarjeta Interactiva 2</h3>
+      <p>También reacciona al hover y clic. ¡Explórala!</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2rem;">Botones Chulos</h2>
+  <button style="padding:1rem 1.5rem; border-radius:50px; font-size:1.1rem; background:#ff793f; border:none; cursor:pointer; transition:0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'" onclick="alert('¡Botón redondo presionado!')">
+    Botón Redondo
+  </button>
+
+  <button style="padding:1rem 1.5rem; border-radius:8px; font-size:1.1rem; background:#82589F; color:white; border:none; cursor:pointer; margin-left:1rem; transition:0.3s;" onmouseover="this.style.transform='rotate(3deg)'" onmouseout="this.style.transform='rotate(0deg)'" onclick="alert('¡Botón con efecto presionado!')">
+    Botón Animado
+  </button>
+</section>
+
 </body>
 </html>
