@@ -5,72 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página Mejorada</title>
   <style>
+    :root {
+      --primario: #4a6cf7;
+      --secundario: #f0f2f8;
+      --texto: #1e1e1e;
+      --radius: 14px;
+      --sombra: 0 6px 18px rgba(0, 0, 0, 0.08);
+      --transicion: 0.25s ease;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Inter", sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
-      color: #222;
+      background: var(--secundario);
+      color: var(--texto);
+      line-height: 1.6;
     }
     header {
-      background: #4a69bd;
+      background: var(--primario);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      box-shadow: var(--sombra);
     }
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background: #1e3799;
+      background: white;
       padding: 1rem;
+      margin-top: -1rem;
+      border-radius: var(--radius);
+      width: 90%;
+      max-width: 900px;
+      box-shadow: var(--sombra);
+      margin-left: auto;
+      margin-right: auto;
     }
     nav a {
-      color: white;
+      color: var(--primario);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: var(--transicion);
+    }
+    nav a:hover {
+      opacity: 0.7;
     }
     section {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 2.5rem auto;
       background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
     }
     button {
-      padding: 0.7rem 1.2rem;
+      padding: 0.8rem 1.4rem;
       font-size: 1rem;
       border: none;
-      border-radius: 8px;
-      background: #38ada9;
+      border-radius: var(--radius);
+      background: var(--primario);
       color: white;
       cursor: pointer;
+      transition: var(--transicion);
     }
     button:hover {
-      background: #079992;
+      filter: brightness(0.92);
     }
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: #4a69bd;
+      padding: 2rem;
+      background: var(--primario);
       color: white;
       margin-top: 3rem;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      box-shadow: var(--sombra);
     }
     .tarjeta {
-      background: #f1f2f6;
+      background: var(--secundario);
       padding: 1.5rem;
-      border-radius: 10px;
+      border-radius: var(--radius);
       margin-top: 1rem;
+      box-shadow: var(--sombra);
+      transition: var(--transicion);
+    }
+    .tarjeta:hover {
+      transform: translateY(-4px);
     }
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
       margin-top: 1rem;
     }
     .galeria img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      transition: var(--transicion);
+    }
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+    /* Interactivos más profesionales */
+    .inter-card {
+      flex: 1;
+      min-width: 260px;
+      padding: 1.5rem;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      cursor: pointer;
+      transition: var(--transicion);
+    }
+    .inter-card:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+    .btn-pro {
+      padding: 1rem 1.7rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      background: var(--primario);
+      color: white;
+      box-shadow: var(--sombra);
+      transition: var(--transicion);
+    }
+    .btn-pro:hover {
+      transform: translateY(-3px);
+      filter: brightness(0.9);
     }
   </style>
 </head>
