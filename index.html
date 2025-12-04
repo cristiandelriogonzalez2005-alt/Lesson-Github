@@ -183,13 +183,13 @@
 </section>
 
 <section id="galeria">
-  <h2>Galería</h2>
-  <p>Una pequeña colección visual:</p>
+  <h2>Galería Temática</h2>
+  <p>Una colección visual inspirada en <strong>realidad virtual</strong> y <strong>Sevilla</strong>.</p>
   <div class="galeria">
-    <img src="https://picsum.photos/300/200?random=1" alt="Imagen random 1">
-    <img src="https://picsum.photos/300/200?random=2" alt="Imagen random 2">
-    <img src="https://picsum.photos/300/200?random=3" alt="Imagen random 3">
-    <img src="https://picsum.photos/300/200?random=4" alt="Imagen random 4">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Realidad Virtual 1">
+    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Realidad Virtual 2">
+    <img src="https://images.unsplash.com/photo-1549893079-842e3a7e6d1b" alt="Sevilla 1">
+    <img src="https://images.unsplash.com/photo-1562771379-7a8d1a786e7a" alt="Sevilla 2">
   </div>
 </section>
 
@@ -209,6 +209,20 @@
 <footer>
   <p>Hecho con ❤️ usando HTML, CSS y JavaScript</p>
 </footer>
+
+<section id="experiencia">
+  <h2>Experiencia Dinámica</h2>
+  <p>Activa efectos visuales y navega entre sensaciones.</p>
+  <button class="btn-pro" onclick="toggleModo()">Cambiar modo visual</button>
+
+  <script>
+    let modoClaro = true;
+    function toggleModo() {
+      modoClaro = !modoClaro;
+      document.body.style.filter = modoClaro ? "none" : "brightness(0.85) contrast(1.15) saturate(1.2)";
+    }
+  </script>
+</section>
 
 <section id="interactivos">
   <h2>Recuadros Interactivos</h2>
